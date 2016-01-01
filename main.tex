@@ -1,0 +1,77 @@
+%*******************************************************************************
+% 
+% main.tex
+%
+% LaTeX template for English project reports and theses at the
+% University of Koblenz–Landau, Campus Landau
+%
+% by Zacharias Steinmetz (steinmetz-z@uni-landau.de)
+%
+% License:
+% This work is licensed under a Creative Commons Attribution-ShareAlike 4.0
+% International License (CC BY-SA 4.0, http://creativecommons.org/licenses/by-sa/4.0/)
+%
+% This template is recommended to be compiled with XeLaTeX.
+% 
+% !TeX program = xelatex
+% !TeX spellcheck = en_US
+%
+%*******************************************************************************
+
+\documentclass[11pt,oneside]{uniLDthesis}
+
+\begin{document}
+
+	\title{Thesis title}
+	\author{Author name}
+	\location{Landau}
+	\date{\today}
+	
+	\thesis{Masters thesis}
+	\fulfillment{
+		A thesis submitted in the fulfillment of the requirements
+		for the degree of Master of Science (M.Sc.) in Ecotoxicology
+		}
+	
+	\supervisors{
+		First supervisor\\
+		Affiliation
+		
+		Second supervisor\\
+		Affiliation
+		}
+	
+	\department{Institute for Environmental Sciences}
+	
+	\secondlogo{1.5cm}{logos/EnvSci}
+	\seconddesc{}
+	
+	\makeatletter
+	\hypersetup{
+		pdftitle    = {\@title},
+		pdfauthor   = {\@author},
+		pdfkeywords = {keyword1,keyword2,...,keywordn},
+		unicode     = true
+	}
+	\makeatother
+	
+	\maketitle
+	\frontmatter
+	
+	\include{abstract}
+	
+	\tableofcontents
+	\listoftables
+	\listoffigures
+	
+	\mainmatter
+
+	\include{body}
+	
+	\bibliographystyle{apalike}
+	\bibliography{references}
+	
+	\appendix
+	\backmatter
+	
+\end{document}
