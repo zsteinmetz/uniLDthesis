@@ -54,6 +54,11 @@
 		pdfkeywords = {keyword1,keyword2,...,keywordn},
 		unicode     = true
 	}
+	\let\title\@title
+	\let\author\@author
+	\let\thesis\@thesis
+	\let\location\@location
+	\let\date\@date
 	\makeatother
 	
 	\maketitle
@@ -72,7 +77,9 @@
 	\bibliographystyle{apalike}
 	\bibliography{references}
 	
+	%\pagenumbering{Roman}
 	\appendix
 	\backmatter
+	\include{affidavit}
 	
 \end{document}

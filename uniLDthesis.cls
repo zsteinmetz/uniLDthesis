@@ -42,16 +42,18 @@
 \RequirePackage[english]{babel}
 \RequirePackage[round,colon]{natbib}\citeindextrue
 \RequirePackage[nottoc]{tocbibind}
+\RequirePackage[hidelinks]{hyperref}
+\RequirePackage{ifthen}
+\RequirePackage{setspace}
+\RequirePackage{titlesec}
 \RequirePackage{palatino} 
 \RequirePackage{graphicx}
 \RequirePackage{tabularx}
 \RequirePackage{amsfonts}
 \RequirePackage{amssymb}
 \RequirePackage{amsmath}
-\RequirePackage{setspace}
-\RequirePackage{titlesec}
-\RequirePackage[hidelinks]{hyperref}
-\RequirePackage{ifthen}
+\RequirePackage{booktabs}
+\RequirePackage[labelfont=bf]{caption}
 
 %--- Code ----------------------------------------------------------------------
 
