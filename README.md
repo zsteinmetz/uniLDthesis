@@ -1,12 +1,34 @@
 # uniLDthesis
 
-LaTeX template for English reports and theses at the University of Koblenz–Landau.
+Unofficial LaTeX template for English reports and theses at the University of Koblenz–Landau. A PDF preview is available [here](https://github.com/zsteinmetz/uniLDthesis/blob/master/main.pdf).
 
-## Compilation
+## Download
 
-This template is recommended to be compiled with XeLaTeX.
+Either clone this git repository or [download](https://github.com/zsteinmetz/uniLDthesis/archive/master.zip) the complete archive.
 
-## Options
+## Build
+
+This template is recommended to be compiled with XeLaTeX using `latexmk`:
+
+```shell
+latexmk -xelatex main
+```
+
+You may want to clean your environment by typing:
+
+```shell
+latexmk -c
+```
+
+Alternatively, the following commands may be used:
+
+```shell
+xelatex main
+makeindex -s main.ist -t main.alg -o main.acr main.acn
+xelatex main
+```
+
+## Features
 
 * Optional second logo
 * `oneside` or `twoside` layout
