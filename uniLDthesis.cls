@@ -14,6 +14,8 @@
 % This template is roughly based on different templates provided by the
 % Faculty of Computer Science, Campus Koblenz, University Koblenz–Landau
 % as well as on a thesis submitted at the University of Duisburg-Essen.
+%
+% Thanks to Detlev Droege and Matthias Biedermann
 % 
 %*******************************************************************************
 
