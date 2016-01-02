@@ -54,6 +54,7 @@
 \RequirePackage{amsmath}
 \RequirePackage{booktabs}
 \RequirePackage[labelfont=bf]{caption}
+\RequirePackage[acronym,toc,nopostdot,nonumberlist]{glossaries}
 
 %--- Code ----------------------------------------------------------------------
 
