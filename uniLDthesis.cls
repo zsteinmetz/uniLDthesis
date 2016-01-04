@@ -48,7 +48,6 @@
 \RequirePackage{ifthen}
 \RequirePackage{setspace}
 \RequirePackage{titlesec}
-\RequirePackage{palatino} 
 \RequirePackage{graphicx}
 \RequirePackage{tabularx}
 \RequirePackage{amsfonts}
