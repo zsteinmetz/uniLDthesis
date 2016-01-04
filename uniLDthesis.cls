@@ -54,7 +54,7 @@
 \RequirePackage{amssymb}
 \RequirePackage{amsmath}
 \RequirePackage{booktabs}
-\RequirePackage[labelfont=bf]{caption}
+\RequirePackage[labelfont=bf,textformat=period]{caption}
 \RequirePackage[acronym,toc,nopostdot,nonumberlist]{glossaries}
 
 %--- Code ----------------------------------------------------------------------
