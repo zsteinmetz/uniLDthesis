@@ -47,6 +47,7 @@
 \RequirePackage[hidelinks]{hyperref}
 \RequirePackage{ifthen}
 \RequirePackage{setspace}
+\RequirePackage{microtype}
 \RequirePackage{titlesec}
 \RequirePackage{graphicx}
 \RequirePackage{tabularx}
