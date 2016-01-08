@@ -41,10 +41,10 @@
 \LoadClass[a4paper,titlepage]{book}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
-\RequirePackage[english]{babel}
+\RequirePackage[ngerman,english]{babel}
 \RequirePackage[round,colon]{natbib}\citeindextrue
 \RequirePackage[nottoc]{tocbibind}
-\RequirePackage[hidelinks]{hyperref}
+\RequirePackage[hidelinks,breaklinks]{hyperref}
 \RequirePackage{ifthen}
 \RequirePackage{setspace}
 \RequirePackage{microtype}
