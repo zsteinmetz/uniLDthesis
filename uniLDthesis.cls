@@ -74,7 +74,7 @@
 \newcommand{\department}{\def\@department}
 
 \def\@secondlogo{}
-\newcommand{\secondlogo}[2]{\def\@secondlogo{\includegraphics[height={#1}]{{#2}}}}
+\newcommand{\secondlogo}[2]{\def\@secondlogo{\includegraphics[{#1}]{{#2}}}}
 
 \def\@seconddesc{}
 \newcommand{\seconddesc}{\def\@seconddesc}

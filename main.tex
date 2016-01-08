@@ -19,13 +19,13 @@
 %
 %*******************************************************************************
 
-\documentclass[11pt,oneside]{uniLDthesis}
-\usepackage{palatino} 
+\documentclass[11pt,oneside]{uniLDthesis} % see README or class file for available options
+\usepackage{palatino} % Choose your preferred fontfamily
 
 \makeglossaries
 
 \begin{document}
-
+	% Add the thesis title, author name, etc.
 	\title{Thesis Title}
 	\author{Author name}
 	\location{Landau}
@@ -47,16 +47,19 @@
 	
 	\department{Institute for Environmental Sciences}
 	
-	\secondlogo{1.5cm}{logos/EnvSci}
+	% Optional second/external logo and description
+	\secondlogo{height=1.5cm}{logos/EnvSci}
 	\seconddesc{}
 	
 	\makeatletter
+	% Hyperref support (add keywords to your PDF document)
 	\hypersetup{
 		pdftitle    = {\@title},
 		pdfauthor   = {\@author},
 		pdfkeywords = {keyword1,keyword2,...,keywordn},
 		unicode     = true
 	}
+	% Define document meta data for later use
 	\let\title\@title
 	\let\author\@author
 	\let\thesis\@thesis
@@ -78,12 +81,10 @@
 
 	\include{body}
 	
-	\bibliographystyle{apalike}
+	\bibliographystyle{apalike} % for other options see natbib manual
 	\bibliography{references}
 	
-	%\pagenumbering{Roman}
 	\appendix
 	\backmatter
-	\include{affidavit}
-	
+	\include{affidavit}	
 \end{document}
