@@ -55,6 +55,7 @@
 \RequirePackage{amssymb}
 \RequirePackage{amsmath}
 \RequirePackage{booktabs}
+\RequirePackage{multirow}
 \RequirePackage[labelfont=bf,textformat=period]{caption}
 \RequirePackage[acronym,toc,nopostdot,nonumberlist]{glossaries}
 
