@@ -56,7 +56,7 @@
 \RequirePackage{amsmath}
 \RequirePackage{booktabs}
 \RequirePackage{multirow}
-\RequirePackage[labelfont=bf,textformat=period]{caption}
+\RequirePackage[labelfont=bf,textformat=period,tableposition=top]{caption}
 \RequirePackage[acronym,toc,nopostdot,nonumberlist]{glossaries}
 
 %--- Code ----------------------------------------------------------------------
@@ -145,9 +145,13 @@
 }
 
 %%% Custom styling
+% Don't show 'Chapter'
 \titleformat{\chapter}[hang]{\bfseries\LARGE}{\thechapter}{2pc}{}
-
 \pagestyle{plain}
+% Set spacing
+% TODO: make it variable
 \onehalfspacing
-
+% Change bibliography name
 \addto{\captionsenglish}{\renewcommand{\bibname}{References}}
+% Add spacing to table captions
+\captionsetup[table]{belowskip=10pt}
