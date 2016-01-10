@@ -22,11 +22,16 @@
 \documentclass[11pt,oneside]{uniLDthesis} % see README or class file for available options
 \usepackage{palatino} % Choose your preferred fontfamily
 
+% Change chapter names
+\addto\captionsenglish{\renewcommand{\bibname}{References}}
+\addto\captionsenglish{\renewcommand\listtablename{List of tables}}
+\addto\captionsenglish{\renewcommand\listfigurename{List of figures}}
+
 \makeglossaries
 
 \begin{document}
 	% Add the thesis title, author name, etc.
-	\title{Thesis Title}
+	\title{Thesis title}
 	\author{Author name}
 	\location{Landau}
 	\date{\today}
@@ -75,7 +80,7 @@
 	\tableofcontents
 	\listoftables
 	\listoffigures
-	\printacronyms[title=List of Abbreviations]
+	\printacronyms[title=List of abbreviations]
 	
 	\mainmatter
 

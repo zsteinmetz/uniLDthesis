@@ -151,7 +151,5 @@
 % Set spacing
 % TODO: make it variable
 \onehalfspacing
-% Change bibliography name
-\addto{\captionsenglish}{\renewcommand{\bibname}{References}}
 % Add spacing to table captions
 \captionsetup[table]{belowskip=10pt}
