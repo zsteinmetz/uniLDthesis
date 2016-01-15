@@ -33,6 +33,7 @@ xelatex main
 * Optional second/external logo
 * `oneside` or `twoside` layout
 * Variable font size (10 - 12 pt) and type (currently palatino)
+* `draft` mode
 
 The document class is based on the LaTeX standard class `book`.
 

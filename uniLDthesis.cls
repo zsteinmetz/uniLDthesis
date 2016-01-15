@@ -28,6 +28,7 @@
 
 \DeclareOption{oneside}{\PassOptionsToClass{oneside}{book}}
 \DeclareOption{twoside}{\PassOptionsToClass{twoside}{book}}
+\DeclareOption{draft}{\PassOptionsToClass{draft}{book}}
 \DeclareOption{10pt}{\PassOptionsToClass{10pt}{book}}
 \DeclareOption{11pt}{\PassOptionsToClass{11pt}{book}}
 \DeclareOption{12pt}{\PassOptionsToClass{12pt}{book}}
