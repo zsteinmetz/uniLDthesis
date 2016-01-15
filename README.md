@@ -8,10 +8,10 @@ Either clone this git repository or [download](https://github.com/zsteinmetz/uni
 
 ## Build
 
-This template is recommended to be compiled with XeLaTeX using `latexmk`:
+This template is recommended to be compiled with _pdflatex_ using `latexmk`:
 
 ```shell
-latexmk -xelatex main
+latexmk main
 ```
 
 You may want to clean your environment by typing:
@@ -23,9 +23,9 @@ latexmk -c
 Alternatively, the following commands may be used:
 
 ```shell
-xelatex main
+pdflatex main
 makeindex -s main.ist -t main.alg -o main.acr main.acn
-xelatex main
+pdflatex main
 ```
 
 ## Features

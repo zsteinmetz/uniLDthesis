@@ -45,7 +45,7 @@
 \RequirePackage[ngerman,english]{babel}
 \RequirePackage[round,colon]{natbib}\citeindextrue
 \RequirePackage[nottoc]{tocbibind}
-\RequirePackage[hidelinks,breaklinks]{hyperref}
+\RequirePackage[hidelinks,breaklinks,unicode]{hyperref}
 \RequirePackage{ifthen}
 \RequirePackage{setspace}
 \RequirePackage{microtype}
@@ -150,7 +150,7 @@
 \titleformat{\chapter}[hang]{\bfseries\LARGE}{\thechapter}{2pc}{}
 \pagestyle{plain}
 % Set spacing
-% TODO: make it variable
+% TODO: make it variable?
 \onehalfspacing
 % Add spacing to table captions
 \captionsetup[table]{belowskip=10pt}

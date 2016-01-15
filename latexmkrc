@@ -16,5 +16,10 @@ push @generated_exts, 'glo', 'gls', 'glsdefs', 'glg';
 push @generated_exts, 'acn', 'acr', 'alg';
 $clean_ext .= ' %R.ist %R.xdy';
 
+# Automatically call pdflatex (instead of latex)
+$pdf_mode = 1;
+
+# Add additional arguments
+$pdflatex = 'pdflatex -shell-escape -file-line-error -interaction=nonstopmode --synctex=-1 %O %S';
 $xelatex = 'xelatex -shell-escape -file-line-error -interaction=nonstopmode --synctex=-1 %O %S';
 
