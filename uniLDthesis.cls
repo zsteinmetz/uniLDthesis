@@ -149,8 +149,10 @@
 % Don't show 'Chapter'
 \titleformat{\chapter}[hang]{\bfseries\LARGE}{\thechapter}{2pc}{}
 \pagestyle{plain}
-% Set spacing
+% Set line spacing
 % TODO: make it variable?
 \onehalfspacing
+% Remove extra space after periods
+\frenchspacing
 % Add spacing to table captions
 \captionsetup[table]{belowskip=10pt}
