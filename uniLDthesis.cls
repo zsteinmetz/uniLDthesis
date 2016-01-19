@@ -24,11 +24,18 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{uniLDthesis}[2016/01/01 v1.0]
 
+%--- Initial code --------------------------------------------------------------
+
+\RequirePackage{ifthen}
+\newboolean{@isDraft}
+
 %--- Declaration of options ----------------------------------------------------
 
 \DeclareOption{oneside}{\PassOptionsToClass{oneside}{book}}
 \DeclareOption{twoside}{\PassOptionsToClass{twoside}{book}}
-\DeclareOption{draft}{\PassOptionsToClass{draft}{book}}
+\DeclareOption{draft}{
+	\PassOptionsToClass{draft}{book}
+	\setboolean{@isDraft}{true}}
 \DeclareOption{10pt}{\PassOptionsToClass{10pt}{book}}
 \DeclareOption{11pt}{\PassOptionsToClass{11pt}{book}}
 \DeclareOption{12pt}{\PassOptionsToClass{12pt}{book}}
@@ -59,29 +66,28 @@
 \RequirePackage{multirow}
 \RequirePackage[labelfont=bf,textformat=period,tableposition=top]{caption}
 \RequirePackage[acronym,toc,nopostdot,nonumberlist]{glossaries}
+\RequirePackage{lineno}
 
 %--- Code ----------------------------------------------------------------------
 
 \def\@thesis{}
 \newcommand{\thesis}{\def\@thesis}
-
 \def\@fulfillment{}
 \newcommand{\fulfillment}{\def\@fulfillment}
-
 \def\@supervisors{}
 \newcommand{\supervisors}{\def\@supervisors}
-
 \def\@department{}
 \newcommand{\department}{\def\@department}
-
 \def\@secondlogo{}
 \newcommand{\secondlogo}[2]{\def\@secondlogo{\includegraphics[{#1}]{{#2}}}}
-
 \def\@seconddesc{}
 \newcommand{\seconddesc}{\def\@seconddesc}
-
 \def\@location{}
 \newcommand{\location}{\def\@location}
+
+\ifthenelse{\boolean{@isDraft}}{
+	\linenumbers
+}{}
 
 %%% Save original offsets
 \newlength{\voffsetBackup}
