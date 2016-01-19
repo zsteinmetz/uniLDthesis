@@ -32,10 +32,25 @@ pdflatex main
 
 * Optional second/external logo
 * `oneside` or `twoside` layout
-* Variable font size (10 - 12 pt) and type (currently palatino)
-* `draft` mode
+* `10pt`, `11pt`, and `12pt` base font size
+* `draft` mode (also enables line numbering)
 
 The document class is based on the LaTeX standard class `book`.
+
+Packages loaded by default include:
+
+* AMS packages `amsfonts`, `amsmath`, and `amssymb`
+* `babel`
+* `booktabs`
+* `caption`
+* `glossaries`
+* `graphicx`
+* `hyperref`
+* `microtype`
+* `multirow`
+* `natbib`
+
+Have a look at [CTAN](https://www.ctan.org/) for package details.
 
 ## License
 
