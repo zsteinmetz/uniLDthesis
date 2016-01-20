@@ -26,9 +26,9 @@
 
 %--- Initial code --------------------------------------------------------------
 
-\RequirePackage{ifthen}
-\newboolean{@isDraft}
-\newboolean{@isReview}
+\RequirePackage{etoolbox}
+\newbool{isDraft}
+\newbool{isReview}
 
 %--- Declaration of options ----------------------------------------------------
 
@@ -36,8 +36,8 @@
 \DeclareOption{twoside}{\PassOptionsToClass{twoside}{book}}
 \DeclareOption{draft}{
 	\PassOptionsToClass{draft}{book}
-	\setboolean{@isDraft}{true}}
-\DeclareOption{review}{\setboolean{@isReview}{true}}
+	\booltrue{isDraft}}
+\DeclareOption{review}{\booltrue{isReview}}
 \DeclareOption{10pt}{\PassOptionsToClass{10pt}{book}}
 \DeclareOption{11pt}{\PassOptionsToClass{11pt}{book}}
 \DeclareOption{12pt}{\PassOptionsToClass{12pt}{book}}
@@ -87,12 +87,9 @@
 \def\@location{}
 \newcommand{\location}{\def\@location}
 
-\ifthenelse{\boolean{@isDraft}}{
-	\linenumbers
-}{}
-\ifthenelse{\boolean{@isReview}}{
-	\linenumbers
-}{}
+\ifboolexpr{bool {isDraft} or bool {isReview}}
+	{\linenumbers}
+	{}
 
 %%% Save original offsets
 \newlength{\voffsetBackup}
