@@ -28,6 +28,7 @@
 
 \RequirePackage{ifthen}
 \newboolean{@isDraft}
+\newboolean{@isReview}
 
 %--- Declaration of options ----------------------------------------------------
 
@@ -36,6 +37,7 @@
 \DeclareOption{draft}{
 	\PassOptionsToClass{draft}{book}
 	\setboolean{@isDraft}{true}}
+\DeclareOption{review}{\setboolean{@isReview}{true}}
 \DeclareOption{10pt}{\PassOptionsToClass{10pt}{book}}
 \DeclareOption{11pt}{\PassOptionsToClass{11pt}{book}}
 \DeclareOption{12pt}{\PassOptionsToClass{12pt}{book}}
@@ -86,6 +88,9 @@
 \newcommand{\location}{\def\@location}
 
 \ifthenelse{\boolean{@isDraft}}{
+	\linenumbers
+}{}
+\ifthenelse{\boolean{@isReview}}{
 	\linenumbers
 }{}
 
