@@ -22,13 +22,14 @@
 %--- Identification ------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{uniLDthesis}[2016/01/01 v1.0]
+\ProvidesClass{uniLDthesis}[2016/02/06 v1.0]
 
 %--- Initial code --------------------------------------------------------------
 
 \RequirePackage{etoolbox}
 \newbool{isDraft}
 \newbool{isReview}
+\newbool{isColor}
 
 %--- Declaration of options ----------------------------------------------------
 
@@ -38,6 +39,7 @@
 	\PassOptionsToClass{draft}{book}
 	\booltrue{isDraft}}
 \DeclareOption{review}{\booltrue{isReview}}
+\DeclareOption{color}{\booltrue{isColor}}
 \DeclareOption{10pt}{\PassOptionsToClass{10pt}{book}}
 \DeclareOption{11pt}{\PassOptionsToClass{11pt}{book}}
 \DeclareOption{12pt}{\PassOptionsToClass{12pt}{book}}
@@ -91,11 +93,9 @@
 	{\linenumbers}
 	{}
 
-% Use colored logo when the color package is loaded
-\AtBeginDocument{\@ifpackageloaded{color}
+\ifboolexpr{bool {isColor}}
 	{\def\@unilogo{logos/unilogo-col}}
 	{\def\@unilogo{logos/unilogo-bw}}
-}
 
 %%% Save original offsets
 \newlength{\voffsetBackup}
@@ -163,8 +163,9 @@
 % Don't show 'Chapter'
 \titleformat{\chapter}[hang]{\bfseries\LARGE}{\thechapter}{2pc}{}
 \pagestyle{plain}
+% Define minimum emergency stretch to avoid overfull hboxes
+\setlength{\emergencystretch}{0.5em}
 % Set line spacing
-% TODO: make it variable?
 \onehalfspacing
 % Remove extra space after periods
 \frenchspacing

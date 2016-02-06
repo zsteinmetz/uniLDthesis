@@ -37,7 +37,7 @@ pdflatex main
 ## Features
 
 * Optional second/external logo
-* Use both black-and-white and color logos
+* `color` option to toggle the blue university logo
 * `oneside` or `twoside` layout
 * `10pt`, `11pt`, and `12pt` base font size
 * `draft` mode: enables line numbering, hides images for faster compilation
