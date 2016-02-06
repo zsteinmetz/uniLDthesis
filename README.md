@@ -4,23 +4,29 @@ Unofficial LaTeX template for English reports and theses at the University of Ko
 
 ## Download
 
-Either clone this git repository or [download](https://github.com/zsteinmetz/uniLDthesis/archive/master.zip) the complete archive.
+Either clone this git repository or [download](https://github.com/zsteinmetz/uniLDthesis/archive/master.zip) the complete archive as zip.
 
 ## Build
 
-This template is recommended to be compiled with _pdflatex_ using `latexmk`:
+Building PDF files from LaTeX sources requires a complete LaTeX distribution installed on your computer, e.g. TeX Live or MiKTeX. See the [LaTeX compendium on Wikibooks](https://en.wikibooks.org/wiki/LaTeX/Installation) for a comprehensive overview and installation instructions. The following steps have been tested on Ubuntu Linux.
+
+### Using Make
+
+Simply type `make` in your command line and open the PDF. This step requires _Make_.
+
+### Using latexmk
+
+You can also use _latexmk_ by typing:
 
 ```shell
 latexmk main
 ```
 
-You may want to clean your environment by typing:
+After building, you may want to clean your environment with `latexmk -c`.
 
-```shell
-latexmk -c
-```
+### Manual compiling
 
-Alternatively, the following commands may be used:
+Alternatively, you can manually compile from sources. The template is recommended to be compiled with _pdflatex_:
 
 ```shell
 pdflatex main
