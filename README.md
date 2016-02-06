@@ -10,11 +10,11 @@ Either clone this git repository or [download](https://github.com/zsteinmetz/uni
 
 Building PDF files from LaTeX sources requires a complete LaTeX distribution installed on your computer, e.g. TeX Live or MiKTeX. See the [LaTeX compendium on Wikibooks](https://en.wikibooks.org/wiki/LaTeX/Installation) for a comprehensive overview and installation instructions. The following steps have been tested on Ubuntu Linux.
 
-### Using Make
+### Using _Make_
 
-Simply type `make` in your command line and open the PDF. This step requires _Make_.
+Simply type `make` into your command line and open the PDF. This step requires _Make_.
 
-### Using latexmk
+### Using _latexmk_
 
 You can also use _latexmk_ by typing:
 
