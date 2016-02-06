@@ -91,6 +91,12 @@
 	{\linenumbers}
 	{}
 
+% Use colored logo when the color package is loaded
+\AtBeginDocument{\@ifpackageloaded{color}
+	{\def\@unilogo{logos/unilogo-col}}
+	{\def\@unilogo{logos/unilogo-bw}}
+}
+
 %%% Save original offsets
 \newlength{\voffsetBackup}
 \setlength{\voffsetBackup}{\voffset}
@@ -113,7 +119,7 @@
 		% Logos		
 		\noindent
 		\parbox{\textwidth}{
-			\includegraphics[height=1cm]{logos/UniLogo}
+			\includegraphics[height=1cm]{\@unilogo}
 			\hfill
 			\@secondlogo
 		}
