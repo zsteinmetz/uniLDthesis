@@ -2,6 +2,8 @@
 
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![Build Status](https://travis-ci.org/zsteinmetz/uniLDthesis.svg?branch=master)](https://travis-ci.org/zsteinmetz/uniLDthesis)
+[![TeX Live](http://img.shields.io/:texlive-2015-yellowgreen.svg?style=flat)](http://creativecommons.org/licenses/by-sa/4.0/)
+[![License](http://img.shields.io/:license-CC BY--SA 4.0-blue.svg?style=flat)](http://creativecommons.org/licenses/by-sa/4.0/)
 
 Unofficial LaTeX template for English reports and theses at the University of Koblenz–Landau. A PDF preview is available [here](https://github.com/zsteinmetz/uniLDthesis/blob/master/main.pdf).
 
