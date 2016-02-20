@@ -3,7 +3,7 @@ install:
 - tar -xf install-tl-unx.tar.gz
 - echo -ne "d\n1\n~/tl\nr\ns\nd\nr\ni" | install-tl-*/install-tl
 - export PATH="$PATH:$HOME/tl/bin/x86_64-linux"
-- tlmgr install latexmk texliveonfly
+- tlmgr install latexmk texliveonfly palatino mathpazo helvetic
 - texhash
 
 script:
