@@ -1,9 +1,9 @@
 install:
 - wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
 - tar -xf install-tl-unx.tar.gz
-- echo -ne "d\n1\n~/tl\nr\ns\nc\nr\ni" | install-tl-*/install-tl
+- echo -ne "d\n1\n~/tl\nr\ns\nd\nr\ni" | install-tl-*/install-tl
 - export PATH="$PATH:$HOME/tl/bin/x86_64-linux"
-- tlmgr install latexmk tocbibind titlesec multirow glossaries mfirstuc xfor datatool tracklang substr palatino mathpazo helvetic
+- tlmgr install latexmk texliveonfly
 - texhash
 
 script:

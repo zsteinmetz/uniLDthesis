@@ -20,6 +20,6 @@ $clean_ext .= ' %R.ist %R.xdy';
 $pdf_mode = 1;
 
 # Add additional arguments
-$pdflatex = 'pdflatex -shell-escape -file-line-error -interaction=nonstopmode --synctex=-1 %O %S';
-$xelatex = 'xelatex -shell-escape -file-line-error -interaction=nonstopmode --synctex=-1 %O %S';
+$pdflatex = "texliveonfly -c pdflatex -a '-shell-escape -file-line-error -interaction=nonstopmode -synctex=-1 %O' %S";
+$xelatex = "texliveonfly -c xelatex -a '-shell-escape -file-line-error -interaction=nonstopmode -synctex=-1 %O' %S";
 
