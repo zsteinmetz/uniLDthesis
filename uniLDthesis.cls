@@ -57,7 +57,6 @@
 \RequirePackage[round,colon]{natbib}\citeindextrue
 \RequirePackage[nottoc]{tocbibind}
 \RequirePackage[hidelinks,breaklinks,unicode]{hyperref}
-\RequirePackage{ifthen}
 \RequirePackage{setspace}
 \RequirePackage{microtype}
 \RequirePackage{titlesec}
