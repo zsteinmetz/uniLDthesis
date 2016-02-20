@@ -1,5 +1,8 @@
 # uniLDthesis
 
+[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
+[![Build Status](https://travis-ci.org/zsteinmetz/uniLDthesis.svg?branch=master)](https://travis-ci.org/zsteinmetz/uniLDthesis)
+
 Unofficial LaTeX template for English reports and theses at the University of Koblenz–Landau. A PDF preview is available [here](https://github.com/zsteinmetz/uniLDthesis/blob/master/main.pdf).
 
 ## Download
@@ -8,7 +11,7 @@ Either clone this git repository or [download](https://github.com/zsteinmetz/uni
 
 ## Build
 
-Building PDF files from LaTeX sources requires a complete LaTeX distribution installed on your computer, e.g. TeX Live or MiKTeX. See the [LaTeX compendium on Wikibooks](https://en.wikibooks.org/wiki/LaTeX/Installation) for a comprehensive overview and installation instructions. The following steps have been tested on Ubuntu Linux.
+Building PDF files from LaTeX sources requires a complete LaTeX distribution installed on your computer, e.g. TeX Live or MiKTeX. See the [LaTeX compendium on Wikibooks](https://en.wikibooks.org/wiki/LaTeX/Installation) for a comprehensive overview and installation instructions. The following steps have been tested on Ubuntu Linux using Tex Live 2015.
 
 ### Using _Make_
 
