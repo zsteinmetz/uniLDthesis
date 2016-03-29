@@ -3,7 +3,7 @@ install:
 - tar -xf install-tl-unx.tar.gz
 - echo -ne "d\n1\n~/tl\nr\ns\nc\nr\ni" | install-tl-*/install-tl
 - export PATH="$PATH:$HOME/tl/bin/x86_64-linux"
-- tlmgr install latexmk tocbibind titlesec multirow acro
+- tlmgr install latexmk tocbibind titlesec multirow acro translations
 - texhash
 
 script:
@@ -11,6 +11,6 @@ script:
 
 notifications:
   email:
-    on_success: never
-    on_failure: always
+    on_success: change
+    on_failure: change
 
