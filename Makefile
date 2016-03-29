@@ -10,6 +10,5 @@ clean:
 
 wipe:
 	latexmk -C
-	rm -rf *.bbl *.synctex
 
 .PHONY: latexmk all clean

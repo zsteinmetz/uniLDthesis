@@ -53,10 +53,10 @@ The document class is based on the LaTeX standard class `book`.
 Packages loaded by default include:
 
 * AMS packages `amsfonts`, `amsmath`, and `amssymb`
+* `acro`
 * `babel`
 * `booktabs`
 * `caption`
-* `glossaries`
 * `graphicx`
 * `hyperref`
 * `microtype`
