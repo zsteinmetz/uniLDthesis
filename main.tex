@@ -29,7 +29,7 @@
 \addto\captionsenglish{\renewcommand\listtablename{List of tables}}
 \addto\captionsenglish{\renewcommand\listfigurename{List of figures}}
 
-\makeglossaries
+\input{acronyms}
 
 \begin{document}
 	% Add the thesis title, author name, etc.
@@ -83,7 +83,7 @@
 	\tableofcontents
 	\listoftables
 	\listoffigures
-	\printacronyms[title=List of abbreviations]
+	\printacronyms[name=List of abbreviations, heading=chapter]
 	
 	\mainmatter
 

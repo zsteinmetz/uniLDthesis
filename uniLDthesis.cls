@@ -56,7 +56,6 @@
 \RequirePackage[ngerman,english]{babel}
 \RequirePackage[round,colon]{natbib}\citeindextrue
 \RequirePackage[nottoc]{tocbibind}
-\RequirePackage[hidelinks,breaklinks,unicode]{hyperref}
 \RequirePackage{setspace}
 \RequirePackage{microtype}
 \RequirePackage{titlesec}
@@ -68,7 +67,8 @@
 \RequirePackage{booktabs}
 \RequirePackage{multirow}
 \RequirePackage[labelfont=bf,textformat=period,tableposition=top]{caption}
-\RequirePackage[acronym,toc,nopostdot,nonumberlist]{glossaries}
+\RequirePackage[hyperref]{acro}
+\RequirePackage[hidelinks,breaklinks,unicode]{hyperref}
 \RequirePackage{lineno}
 
 %--- Code ----------------------------------------------------------------------
@@ -109,11 +109,9 @@
 \renewcommand{\maketitle}{
 	
 	\begin{titlepage}
-		\ifthenelse{\boolean{@twoside}}{
-		      	\setcounter{page}{-1}
-		}{
-		\setcounter{page}{0}
-		}
+		\ifbool{@twoside}
+			{\setcounter{page}{-1}}
+			{\setcounter{page}{0}}
 			
 		% Logos		
 		\noindent
