@@ -33,16 +33,13 @@
 
 %--- Declaration of options ----------------------------------------------------
 
-\DeclareOption{oneside}{\PassOptionsToClass{oneside}{book}}
-\DeclareOption{twoside}{\PassOptionsToClass{twoside}{book}}
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{scrbook}}
+
 \DeclareOption{draft}{
-	\PassOptionsToClass{draft}{book}
+	\PassOptionsToClass{draft}{scrbook}
 	\booltrue{isDraft}}
 \DeclareOption{review}{\booltrue{isReview}}
 \DeclareOption{color}{\booltrue{isColor}}
-\DeclareOption{10pt}{\PassOptionsToClass{10pt}{book}}
-\DeclareOption{11pt}{\PassOptionsToClass{11pt}{book}}
-\DeclareOption{12pt}{\PassOptionsToClass{12pt}{book}}
 
 %--- Execution of options ------------------------------------------------------
 
@@ -50,15 +47,13 @@
 
 %--- Package loading -----------------------------------------------------------
 
-\LoadClass[a4paper,titlepage]{book}
+\LoadClass[toc=bibliography,toc=listof]{scrbook}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
 \RequirePackage[ngerman,english]{babel}
 \RequirePackage[round,colon]{natbib}\citeindextrue
-\RequirePackage[nottoc]{tocbibind}
 \RequirePackage{setspace}
 \RequirePackage{microtype}
-\RequirePackage{titlesec}
 \RequirePackage{graphicx}
 \RequirePackage{tabularx}
 \RequirePackage{amsfonts}
@@ -66,9 +61,10 @@
 \RequirePackage{amsmath}
 \RequirePackage{booktabs}
 \RequirePackage{multirow}
-\RequirePackage[labelfont=bf,textformat=period,tableposition=top]{caption}
-\RequirePackage[hyperref]{acro}
+\RequirePackage[labelfont=bf,textformat=period]{caption}
+\RequirePackage[hyperref=true,single=true,messages=silent]{acro}
 \RequirePackage[hidelinks,breaklinks,unicode]{hyperref}
+\usepackage[inline]{enumitem}
 \RequirePackage{lineno}
 
 %--- Code ----------------------------------------------------------------------
@@ -106,14 +102,14 @@
 \setlength{\parskip}{0.25\baselineskip}
 
 %%% Title page
-\renewcommand{\maketitle}{
-	
+\renewcommand\maketitle{
 	\begin{titlepage}
-		\ifbool{@twoside}
+		\ifbool{@twoside}	
 			{\setcounter{page}{-1}}
 			{\setcounter{page}{0}}
-			
-		% Logos		
+		\thispagestyle{empty}
+	
+		% Logos
 		\noindent
 		\parbox{\textwidth}{
 			\includegraphics[height=1cm]{\@unilogo}
@@ -151,14 +147,13 @@
 		
 	\end{titlepage}
 	
-	\thispagestyle{empty}
 	\setlength{\voffset}{\voffsetBackup}
 	\setlength{\hoffset}{\hoffsetBackup}
 }
 
 %%% Custom styling
-% Don't show 'Chapter'
-\titleformat{\chapter}[hang]{\bfseries\LARGE}{\thechapter}{2pc}{}
+\addtokomafont{disposition}{\rmfamily}
+
 \pagestyle{plain}
 % Define minimum emergency stretch to avoid overfull hboxes
 \setlength{\emergencystretch}{0.5em}
@@ -168,3 +163,18 @@
 \frenchspacing
 % Add spacing to table captions
 \captionsetup[table]{belowskip=10pt}
+
+% Remove indentation for list of tables and list of figures
+\renewcommand*\l@figure{\@dottedtocline{1}{0em}{2.3em}}% Default: 1.5em/2.3em
+\let\l@table\l@figure
+
+% Acronym styling
+\newlist{acronyms}{description}{1}
+\newcommand*\textnf[1]{\textnormal{#1}}
+\setlist[acronyms]{
+	labelwidth=5em,
+	leftmargin=5em,
+	font=\textnf
+}
+\DeclareAcroListStyle{uniLDthesis}{list}{list = acronyms}
+\acsetup{list-style=uniLDthesis}
