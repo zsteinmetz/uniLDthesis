@@ -44,11 +44,11 @@ pdflatex main
 * Optional second/external logo
 * `color` option to toggle the blue university logo
 * `oneside` or `twoside` layout
-* `10pt`, `11pt`, and `12pt` base font size
+* variable base font size
 * `draft` mode: enables line numbering, hides images for faster compilation
 * `review` option: keeps line numbering enabled but displays images
 
-The document class is based on the LaTeX standard class `book`.
+The document class is based on the KOMA script book class `scrbook`.
 
 Packages loaded by default include:
 
@@ -57,6 +57,7 @@ Packages loaded by default include:
 * `babel`
 * `booktabs`
 * `caption`
+* `enumitem`
 * `graphicx`
 * `hyperref`
 * `microtype`
