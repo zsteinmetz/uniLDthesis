@@ -1,7 +1,6 @@
 # uniLDthesis
 
 [![Project Status: Inactive – The project has reached a stable, usable state but is no longer being actively developed; support/maintenance will be provided as time allows.](https://www.repostatus.org/badges/latest/inactive.svg)](https://www.repostatus.org/#inactive)
-[![Build Status](https://travis-ci.org/zsteinmetz/uniLDthesis.svg?branch=master)](https://travis-ci.org/zsteinmetz/uniLDthesis)
 [![TeX Live](http://img.shields.io/:texlive-2015-yellowgreen.svg?style=flat)](https://tug.org/texlive/)
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-sa/4.0/)
 
